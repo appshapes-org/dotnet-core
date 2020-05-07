@@ -1,0 +1,41 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.101
+    - name: Install
+      run: dotnet restore
+    - name: Package
+      run: |
+        git clean -xdf
+        dotnet pack --include-symbols --include-source -p:SymbolPackageFormat=snupkg --nologo
+    - name: Publish
+      run: |
+        if dotnet nuget push ./AppShapes.Core.Logging/bin/Debug/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --timeout 15; then
+            dotnet nuget push ./AppShapes.Core.Logging/bin/Debug/*.snupkg -k ${{ secrets.NUGET_API_KEY }} -s https://www.nuget.org/api/v2/symbolpackage --timeout 15
+        fi
+        if dotnet nuget push ./AppShapes.Core/bin/Debug/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --timeout 15; then
+            dotnet nuget push ./AppShapes.Core/bin/Debug/*.snupkg -k ${{ secrets.NUGET_API_KEY }} -s https://www.nuget.org/api/v2/symbolpackage --timeout 15
+        fi
+        if dotnet nuget push ./AppShapes.Core.Database/bin/Debug/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --timeout 15; then
+            dotnet nuget push ./AppShapes.Core.Database/bin/Debug/*.snupkg -k ${{ secrets.NUGET_API_KEY }} -s https://www.nuget.org/api/v2/symbolpackage --timeout 15
+        fi
+        if dotnet nuget push ./AppShapes.Core.Service/bin/Debug/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --timeout 15; then
+            dotnet nuget push ./AppShapes.Core.Service/bin/Debug/*.snupkg -k ${{ secrets.NUGET_API_KEY }} -s https://www.nuget.org/api/v2/symbolpackage --timeout 15
+        fi
+        if dotnet nuget push ./AppShapes.Core.Testing/bin/Debug/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --timeout 15; then
+            dotnet nuget push ./AppShapes.Core.Testing/bin/Debug/*.snupkg -k ${{ secrets.NUGET_API_KEY }} -s https://www.nuget.org/api/v2/symbolpackage --timeout 15
+        fi

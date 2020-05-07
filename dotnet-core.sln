@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{052EB00E-E05B-4186-A3A3-97629D49A32B}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		.github\workflows\deployment.yml = .github\workflows\deployment.yml
+		.github\workflows\integration.yml = .github\workflows\integration.yml
+		NuGet.Config = NuGet.Config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppShapes.Core.Service", "AppShapes.Core.Service\AppShapes.Core.Service.csproj", "{250CD979-E588-46F1-82D9-2532DE8A7487}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppShapes.Core.Logging", "AppShapes.Core.Logging\AppShapes.Core.Logging.csproj", "{7E9F19D7-9190-45A1-8879-FD39E5004028}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppShapes.Core.Tests.Unit.Tests", "AppShapes.Core.Tests.Unit.Tests\AppShapes.Core.Tests.Unit.Tests.csproj", "{E56B74C3-79E7-4B38-9142-0ED61055DDB4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppShapes.Core.Testing", "AppShapes.Core.Testing\AppShapes.Core.Testing.csproj", "{EB0DB547-8B22-4145-A30F-3C0372622DC0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppShapes.Core", "AppShapes.Core\AppShapes.Core.csproj", "{3B132BFD-680E-4F4A-BFA0-12107A4AC0EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppShapes.Core.Database", "AppShapes.Core.Database\AppShapes.Core.Database.csproj", "{FF906B70-4536-42E4-85FE-2F3967CBC1E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{250CD979-E588-46F1-82D9-2532DE8A7487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{250CD979-E588-46F1-82D9-2532DE8A7487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{250CD979-E588-46F1-82D9-2532DE8A7487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{250CD979-E588-46F1-82D9-2532DE8A7487}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E9F19D7-9190-45A1-8879-FD39E5004028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E9F19D7-9190-45A1-8879-FD39E5004028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E9F19D7-9190-45A1-8879-FD39E5004028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E9F19D7-9190-45A1-8879-FD39E5004028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E56B74C3-79E7-4B38-9142-0ED61055DDB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E56B74C3-79E7-4B38-9142-0ED61055DDB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E56B74C3-79E7-4B38-9142-0ED61055DDB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E56B74C3-79E7-4B38-9142-0ED61055DDB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB0DB547-8B22-4145-A30F-3C0372622DC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB0DB547-8B22-4145-A30F-3C0372622DC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB0DB547-8B22-4145-A30F-3C0372622DC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB0DB547-8B22-4145-A30F-3C0372622DC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B132BFD-680E-4F4A-BFA0-12107A4AC0EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B132BFD-680E-4F4A-BFA0-12107A4AC0EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B132BFD-680E-4F4A-BFA0-12107A4AC0EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B132BFD-680E-4F4A-BFA0-12107A4AC0EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF906B70-4536-42E4-85FE-2F3967CBC1E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF906B70-4536-42E4-85FE-2F3967CBC1E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF906B70-4536-42E4-85FE-2F3967CBC1E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF906B70-4536-42E4-85FE-2F3967CBC1E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8921CA8-7305-41FD-974A-34122C47BBF8}
+	EndGlobalSection
+EndGlobal

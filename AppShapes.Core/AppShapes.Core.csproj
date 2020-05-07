@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>@RjaeEaston</Authors>
+    <Company>AppShapes</Company>
+    <Description>Core patterns</Description>
+    <Version>2.0.0</Version>
+    <PackageId>AppShapes.Core</PackageId>
+    <PackageReleaseNotes>Move ReflectionHelper to AppShapes.Core</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.4.0" />
+  </ItemGroup>
+
+</Project>
