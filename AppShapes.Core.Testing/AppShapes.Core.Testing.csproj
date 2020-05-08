@@ -6,8 +6,8 @@
     <Company>AppShapes</Company>
     <Description>Core testing patterns, e.g., MockLogger.</Description>
     <PackageId>AppShapes.Core.Testing</PackageId>
-    <Version>2.2.5</Version>
-    <PackageReleaseNotes>Minor corrections to testing patterns</PackageReleaseNotes>
+    <Version>2.2.6</Version>
+    <PackageReleaseNotes>Create MockMigrator</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
