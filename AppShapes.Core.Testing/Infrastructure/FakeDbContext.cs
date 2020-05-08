@@ -15,9 +15,9 @@ namespace AppShapes.Core.Testing.Infrastructure
         {
         }
 
-        public FakeDbContext(DbContextOptions options) : base(options)
+        public FakeDbContext(DbContextOptions options, IMigrator migrator = null) : base(options)
         {
-            Dictionary<Type, object> services = new Dictionary<Type, object> {{typeof(IMigrator), new NullMigrator()}};
+            Dictionary<Type, object> services = new Dictionary<Type, object> {{typeof(IMigrator), migrator ?? new NullMigrator()}};
             Database = new DatabaseFacadeStub(this, new DelegatingServiceProvider(type => services[type], () => { }));
         }
 

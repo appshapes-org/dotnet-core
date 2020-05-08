@@ -19,7 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AppShapes.Core.Database\AppShapes.Core.Database.csproj" />
+    <ProjectReference Include="..\AppShapes.Core.Domain\AppShapes.Core.Domain.csproj" />
     <ProjectReference Include="..\AppShapes.Core.Logging\AppShapes.Core.Logging.csproj" />
+    <ProjectReference Include="..\AppShapes.Core.Messaging\AppShapes.Core.Messaging.csproj" />
     <ProjectReference Include="..\AppShapes.Core.Service\AppShapes.Core.Service.csproj" />
     <ProjectReference Include="..\AppShapes.Core.Testing\AppShapes.Core.Testing.csproj" />
     <ProjectReference Include="..\AppShapes.Core\AppShapes.Core.csproj" />

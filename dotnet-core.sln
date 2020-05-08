@@ -25,6 +25,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppShapes.Core", "AppShapes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppShapes.Core.Database", "AppShapes.Core.Database\AppShapes.Core.Database.csproj", "{FF906B70-4536-42E4-85FE-2F3967CBC1E3}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppShapes.Core.Domain", "AppShapes.Core.Domain\AppShapes.Core.Domain.csproj", "{A2258A22-FDEF-4163-9663-BFBB44C3AA8D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppShapes.Core.Messaging", "AppShapes.Core.Messaging\AppShapes.Core.Messaging.csproj", "{4DD49719-AA91-402E-83EC-5121903FE690}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +59,14 @@ Global
 		{FF906B70-4536-42E4-85FE-2F3967CBC1E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF906B70-4536-42E4-85FE-2F3967CBC1E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF906B70-4536-42E4-85FE-2F3967CBC1E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2258A22-FDEF-4163-9663-BFBB44C3AA8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2258A22-FDEF-4163-9663-BFBB44C3AA8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2258A22-FDEF-4163-9663-BFBB44C3AA8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2258A22-FDEF-4163-9663-BFBB44C3AA8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DD49719-AA91-402E-83EC-5121903FE690}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DD49719-AA91-402E-83EC-5121903FE690}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DD49719-AA91-402E-83EC-5121903FE690}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DD49719-AA91-402E-83EC-5121903FE690}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

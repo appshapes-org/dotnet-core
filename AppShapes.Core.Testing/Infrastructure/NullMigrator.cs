@@ -6,16 +6,16 @@ namespace AppShapes.Core.Testing.Infrastructure
 {
     public class NullMigrator : IMigrator
     {
-        public string GenerateScript(string fromMigration = null, string toMigration = null, bool idempotent = false)
+        public virtual string GenerateScript(string fromMigration = null, string toMigration = null, bool idempotent = false)
         {
             return string.Empty;
         }
 
-        public void Migrate(string targetMigration = null)
+        public virtual void Migrate(string targetMigration = null)
         {
         }
 
-        public Task MigrateAsync(string targetMigration = null, CancellationToken cancellationToken = new CancellationToken())
+        public virtual Task MigrateAsync(string targetMigration = null, CancellationToken cancellationToken = new CancellationToken())
         {
             Migrate();
             return Task.CompletedTask;

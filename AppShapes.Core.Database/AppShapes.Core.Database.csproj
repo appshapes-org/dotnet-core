@@ -5,9 +5,9 @@
     <Authors>@RjaeEaston</Authors>
     <Company>AppShapes</Company>
     <Description>AppShapes.Core.Database</Description>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <PackageId>AppShapes.Core.Database</PackageId>
-    <PackageReleaseNotes>Refactor database configuration</PackageReleaseNotes>
+    <PackageReleaseNotes>Add OutboxContext</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AppShapes.Core.Logging\AppShapes.Core.Logging.csproj" />
+    <ProjectReference Include="..\AppShapes.Core.Messaging\AppShapes.Core.Messaging.csproj" />
   </ItemGroup>
 
 </Project>
