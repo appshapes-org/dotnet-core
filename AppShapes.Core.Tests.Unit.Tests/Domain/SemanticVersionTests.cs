@@ -21,7 +21,7 @@ namespace AppShapes.Core.Tests.Unit.Tests.Domain
         [InlineData("1")]
         public void ConstructorMustThrowExceptionWhenVersionIsNotValid(string value)
         {
-            Assert.Throws<ArgumentException>(() => new SemanticVersion(value));
+            Assert.Equal($"Invalid version: {value}", Assert.Throws<ArgumentException>(() => new SemanticVersion(value)).Message);
         }
     }
 }

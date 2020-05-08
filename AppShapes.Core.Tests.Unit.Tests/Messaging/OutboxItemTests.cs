@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 using AppShapes.Core.Messaging;
 using AppShapes.Core.Testing.Messaging;
 using Newtonsoft.Json;
@@ -53,7 +52,7 @@ namespace AppShapes.Core.Tests.Unit.Tests.Messaging
         [Fact]
         public void UpdateMessageMustThrowExceptionWhenMessageDoesNotContainProperty()
         {
-            Assert.Throws<ArgumentException>(() => new OutboxItem(new TestEvent()).UpdateMessage("DoesNotExist", "42"));
+            Assert.Equal($"{nameof(TestEvent)}.DoesNotExist not found; not setting to: 42", Assert.Throws<ArgumentException>(() => new OutboxItem(new TestEvent()).UpdateMessage("DoesNotExist", "42")).Message);
         }
 
         [Fact]

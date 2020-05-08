@@ -30,6 +30,31 @@ namespace AppShapes.Core.Tests.Unit.Tests.Domain
         }
 
         [Fact]
+        public void CompareToMustReturnNonZeroWhenOtherIsNotEqualCaseInsensitive()
+        {
+            Assert.NotEqual(0, new NormalString("foo", true, false).CompareTo(new NormalString("bar", true, false)));
+        }
+
+        [Fact]
+        public void CompareToMustReturnNonZeroWhenOtherIsNotEqualCaseSensitive()
+        {
+            Assert.NotEqual(0, new NormalString("Test", true, false).CompareTo(new NormalString("test")));
+        }
+
+        [Fact]
+        public void CompareToMustReturnZeroWhenOtherIsEqualCaseInsensitive()
+        {
+            Assert.Equal(0, new NormalString("GHI", true, false).CompareTo(new NormalString("GHI", true, false)));
+            Assert.Equal(0, new NormalString("GHI", true, false).CompareTo(new NormalString("ghi", true, false)));
+        }
+
+        [Fact]
+        public void CompareToMustReturnZeroWhenOtherIsEqualCaseSensitive()
+        {
+            Assert.Equal(0, new NormalString("GHI").CompareTo(new NormalString("GHI")));
+        }
+
+        [Fact]
         public void ConstructorMustNotTrimValueWhenShouldTrimIsFalse()
         {
             Assert.Equal("12345 ", new NormalString("12345 ", false).Value);
@@ -56,19 +81,45 @@ namespace AppShapes.Core.Tests.Unit.Tests.Domain
         [Fact]
         public void EqualsMustReturnFalseWhenValuesAreNotEqual()
         {
-            Assert.NotEqual(new NormalString("test"), new NormalString("not test"));
+            Assert.False(new NormalString("test").Equals(new NormalString("not test")));
+            Assert.False(new NormalString("test", true, false).Equals(new NormalString("not test")));
+            Assert.False(new NormalString("test").Equals(new NormalString("not test", true, false)));
+            Assert.False(new NormalString("test", true, false).Equals(new NormalString("not test", true, false)));
+        }
+
+        [Fact]
+        public void EqualsMustReturnFalseWhenValuesAreNotEqualCaseSensitive()
+        {
+            Assert.False(new NormalString("Test").Equals(new NormalString("test")));
+            Assert.False(new NormalString("Test", true, false).Equals(new NormalString("test")));
+            Assert.False(new NormalString("Test").Equals(new NormalString("test", true, false)));
         }
 
         [Fact]
         public void EqualsMustReturnTrueWhenValuesAreEqual()
         {
             Assert.True(new NormalString("test").Equals(new NormalString("test")));
+            Assert.True(new NormalString("test", true, false).Equals(new NormalString("test")));
+            Assert.True(new NormalString("test").Equals(new NormalString("test", true, false)));
+            Assert.True(new NormalString("test", true, false).Equals(new NormalString("test", true, false)));
         }
 
         [Fact]
         public void EqualsMustReturnTrueWhenValuesAreEqualCaseInsensitive()
         {
             Assert.True(new NormalString("Test", true, false).Equals(new NormalString("test", true, false)));
+        }
+
+        [Fact]
+        public void GetHashCodeMustNotReturnSameValueWhenValuesAreNotEqual()
+        {
+            Assert.NotEqual(new NormalString("Test").GetHashCode(), new NormalString("test").GetHashCode());
+        }
+
+        [Fact]
+        public void GetHashCodeMustNotReturnSameValueWhenValuesAreNotEqualCaseInsensitive()
+        {
+            Assert.NotEqual(new NormalString("tset", true, false).GetHashCode(), new NormalString("test", true, false).GetHashCode());
         }
 
         [Fact]
@@ -80,7 +131,7 @@ namespace AppShapes.Core.Tests.Unit.Tests.Domain
         [Fact]
         public void GetHashCodeMustReturnSameValueWhenValuesAreEqualCaseInsensitive()
         {
-            Assert.Equal(new NormalString("test", true, false).GetHashCode(), new NormalString("test", true, false).GetHashCode());
+            Assert.Equal(new NormalString("Test", true, false).GetHashCode(), new NormalString("test", true, false).GetHashCode());
         }
 
         private class NormalString : StringBase
