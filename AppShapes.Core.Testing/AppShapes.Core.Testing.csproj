@@ -6,7 +6,7 @@
     <Company>AppShapes</Company>
     <Description>Core testing patterns, e.g., MockLogger.</Description>
     <PackageId>AppShapes.Core.Testing</PackageId>
-    <Version>2.2.6</Version>
+    <Version>3.1.0</Version>
     <PackageReleaseNotes>Create MockMigrator</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>

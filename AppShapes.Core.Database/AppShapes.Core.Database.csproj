@@ -5,7 +5,7 @@
     <Authors>@RjaeEaston</Authors>
     <Company>AppShapes</Company>
     <Description>AppShapes.Core.Database</Description>
-    <Version>1.0.3</Version>
+    <Version>3.1.0</Version>
     <PackageId>AppShapes.Core.Database</PackageId>
     <PackageReleaseNotes>Add OutboxContext</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
