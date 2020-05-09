@@ -6,5 +6,9 @@ namespace AppShapes.Core.Service
     [ApiController]
     public abstract class ApiControllerBase : ControllerBase
     {
+        protected virtual string GetRouteUrl(string routeName, object routeValues)
+        {
+            return Url.RouteUrl(routeName, routeValues);
+        }
     }
 }
