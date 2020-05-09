@@ -6,7 +6,7 @@
     <Company>AppShapes</Company>
     <Description>ASP.NET Core Service</Description>
     <PackageId>AppShapes.Core.Service</PackageId>
-    <Version>2.0.6</Version>
+    <Version>3.1.0</Version>
     <PackageReleaseNotes>Remove unused database dependency</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>

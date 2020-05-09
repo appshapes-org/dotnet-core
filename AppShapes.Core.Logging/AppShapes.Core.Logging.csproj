@@ -6,7 +6,7 @@
     <Company>AppShapes</Company>
     <Description>Core logging patterns, e.g., LoggingExtensions.</Description>
     <PackageId>AppShapes.Core.Logging</PackageId>
-    <Version>2.0.1</Version>
+    <Version>3.1.0</Version>
     <PackageReleaseNotes>Set license expression</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
