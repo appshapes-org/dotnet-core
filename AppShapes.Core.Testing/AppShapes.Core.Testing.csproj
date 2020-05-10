@@ -6,8 +6,8 @@
     <Company>AppShapes</Company>
     <Description>Core testing patterns, e.g., MockLogger.</Description>
     <PackageId>AppShapes.Core.Testing</PackageId>
-    <Version>3.1.1</Version>
-    <PackageReleaseNotes>Create WebApplicationBuilder</PackageReleaseNotes>
+    <Version>3.1.2</Version>
+    <PackageReleaseNotes>Move UseEnvironment call to delegate</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 

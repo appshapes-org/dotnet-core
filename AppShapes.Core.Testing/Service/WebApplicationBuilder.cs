@@ -11,7 +11,13 @@ namespace AppShapes.Core.Testing.Service
 {
     public class WebApplicationBuilder<TStartup> : WebApplicationFactory<TStartup> where TStartup : class
     {
-        public Func<string[], IWebHostBuilder> CreateWebHostBuilderAction { get; set; } = a => WebHost.CreateDefaultBuilder<TStartup>(a).ConfigureLogging((_, x) => x.ClearProviders());
+        public virtual Func<string[], IWebHostBuilder> CreateWebHostBuilderAction { get; set; } = args =>
+        {
+            IWebHostBuilder builder = WebHost.CreateDefaultBuilder<TStartup>(args);
+            builder.ConfigureLogging((_, x) => x.ClearProviders());
+            builder.UseEnvironment(Environments.Development);
+            return builder;
+        };
 
         public ServiceProvider Dependencies { get; private set; }
 
@@ -46,7 +52,7 @@ namespace AppShapes.Core.Testing.Service
             }
             catch
             {
-                return CreateWebHostBuilderAction(new string[] { }).UseEnvironment(Environments.Development);
+                return CreateWebHostBuilderAction(new string[] { });
             }
         }
     }
