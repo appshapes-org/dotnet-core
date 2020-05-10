@@ -58,7 +58,7 @@ namespace AppShapes.Core.Testing.Infrastructure
 
         public override void RemoveRange(params T[] entities)
         {
-            RemoveRange(entities.AsEnumerable());
+            RemoveRange((IEnumerable<T>) entities);
         }
 
         protected List<T> Entities { get; }

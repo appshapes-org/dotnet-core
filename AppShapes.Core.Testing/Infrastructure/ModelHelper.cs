@@ -17,13 +17,13 @@ namespace AppShapes.Core.Testing.Infrastructure
         ///     Get index for specified entity and property.
         /// </summary>
         /// <typeparam name="T">entity</typeparam>
-        /// <param name="name">property</param>
+        /// <param name="propertyNames">property</param>
         /// <returns></returns>
-        public Index GetIndex<T>(string name)
+        public Index GetIndex<T>(params string[] propertyNames)
         {
             EntityType entityType = Assertions.Contains(typeof(T).FullName, (IDictionary<string, EntityType>) ReflectionHelper.GetField(Model, "_entityTypes"));
             IDictionary<IReadOnlyList<IProperty>, Index> indexes = (IDictionary<IReadOnlyList<IProperty>, Index>) ReflectionHelper.GetField(entityType, "_indexes");
-            KeyValuePair<IReadOnlyList<IProperty>, Index> index = indexes.FirstOrDefault(x => x.Key.Any(y => Equals(y.Name, name)));
+            KeyValuePair<IReadOnlyList<IProperty>, Index> index = indexes.FirstOrDefault(x => x.Key.Select(y => y.Name).SequenceEqual(propertyNames));
             Assertions.NotNull(index.Value);
             return index.Value;
         }
