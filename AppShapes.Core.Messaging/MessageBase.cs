@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using AppShapes.Core.Domain;
 
 namespace AppShapes.Core.Messaging
@@ -42,9 +43,15 @@ namespace AppShapes.Core.Messaging
         [Description("Type Version")]
         public string Version { get => itsVersion ??= new SemanticVersion(GetVersion()).Value; set => itsVersion = new SemanticVersion(value).Value; }
 
-        protected abstract string GetContext();
+        protected virtual string GetContext()
+        {
+            return GetType().Namespace?.Split('.').FirstOrDefault();
+        }
 
-        protected abstract string GetEntityName();
+        protected virtual string GetEntityName()
+        {
+            return GetType().Name;
+        }
 
         protected abstract string GetMessageType();
 
