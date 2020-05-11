@@ -63,7 +63,8 @@ namespace AppShapes.Core.Messaging
 
         protected virtual string GetContext()
         {
-            return GetType().Namespace?.Split('.').FirstOrDefault();
+            string nameSpace = GetNamespace();
+            return string.IsNullOrWhiteSpace(nameSpace) ? Entity : nameSpace.Split('.')[0];
         }
 
         protected virtual string GetEntityName()
@@ -75,6 +76,11 @@ namespace AppShapes.Core.Messaging
         protected virtual string GetMessageType()
         {
             return GetType().Name;
+        }
+
+        protected virtual string GetNamespace()
+        {
+            return GetType().Namespace;
         }
 
         protected virtual string GetVersion()
