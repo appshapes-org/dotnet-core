@@ -21,6 +21,10 @@ namespace AppShapes.Core.Testing.Service
 
         public ServiceProvider Dependencies { get; private set; }
 
+        protected virtual void ConfigureBootstrap(ServiceProvider provider)
+        {
+        }
+
         protected virtual void ConfigureLogging(IServiceCollection services)
         {
             services.AddLogging(options =>
@@ -41,6 +45,7 @@ namespace AppShapes.Core.Testing.Service
             {
                 ConfigureServices(services);
                 Dependencies = services.BuildServiceProvider();
+                ConfigureBootstrap(Dependencies);
             });
         }
 
