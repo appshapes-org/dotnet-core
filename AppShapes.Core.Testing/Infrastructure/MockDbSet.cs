@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Threading;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Metadata;
@@ -25,6 +27,11 @@ namespace AppShapes.Core.Testing.Infrastructure
         {
             Entities.Add(entity);
             return new EntityEntry<T>(new MockEntityEntry(entity, null, new EntityType(typeof(T), new Model(), ConfigurationSource.Explicit)));
+        }
+
+        public override ValueTask<EntityEntry<T>> AddAsync(T entity, CancellationToken cancellationToken = new CancellationToken())
+        {
+            return new ValueTask<EntityEntry<T>>(Add(entity));
         }
 
         public Expression Expression { get; }
