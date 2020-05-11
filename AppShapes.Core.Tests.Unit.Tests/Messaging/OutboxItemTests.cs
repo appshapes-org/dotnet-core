@@ -25,8 +25,8 @@ namespace AppShapes.Core.Tests.Unit.Tests.Messaging
         [Fact]
         public void ConstructorMustSerializeMessageThatMatchesOriginalMessageWhenDeserialized()
         {
-            TestEvent expected = new TestEvent();
-            TestEvent actual = JsonConvert.DeserializeObject<TestEvent>(new OutboxItem(expected).Message);
+            TestCreatedEvent expected = new TestCreatedEvent();
+            TestCreatedEvent actual = JsonConvert.DeserializeObject<TestCreatedEvent>(new OutboxItem(expected).Message);
             Assert.Equal(expected.CorrelationId, actual.CorrelationId);
             Assert.Equal(expected.Id, actual.Id);
             Assert.Equal(expected.GetEntityId(), actual.GetEntityId());
@@ -38,7 +38,7 @@ namespace AppShapes.Core.Tests.Unit.Tests.Messaging
         [Fact]
         public void ConstructorMustSetPropertiesFromMessageWhenCalled()
         {
-            TestEvent testEvent = new TestEvent();
+            TestCreatedEvent testEvent = new TestCreatedEvent();
             StubOutboxItem outboxItem = new StubOutboxItem(testEvent);
             Assert.Equal(testEvent.CorrelationId, outboxItem.CorrelationId);
             Assert.Equal(testEvent.Id, outboxItem.Id);
@@ -52,15 +52,15 @@ namespace AppShapes.Core.Tests.Unit.Tests.Messaging
         [Fact]
         public void UpdateMessageMustThrowExceptionWhenMessageDoesNotContainProperty()
         {
-            Assert.Equal($"{nameof(TestEvent)}.DoesNotExist not found; not setting to: 42", Assert.Throws<ArgumentException>(() => new OutboxItem(new TestEvent()).UpdateMessage("DoesNotExist", "42")).Message);
+            Assert.Equal($"{nameof(TestCreatedEvent)}.DoesNotExist not found; not setting to: 42", Assert.Throws<ArgumentException>(() => new OutboxItem(new TestCreatedEvent()).UpdateMessage("DoesNotExist", "42")).Message);
         }
 
         [Fact]
         public void UpdateMessageMustUpdatePropertyWhenMessageContainsProperty()
         {
-            OutboxItem outboxItem = new OutboxItem(new TestEvent());
+            OutboxItem outboxItem = new OutboxItem(new TestCreatedEvent());
             outboxItem.UpdateMessage("correlationId", "42");
-            TestEvent testEvent = JsonConvert.DeserializeObject<TestEvent>(outboxItem.Message);
+            TestCreatedEvent testEvent = JsonConvert.DeserializeObject<TestCreatedEvent>(outboxItem.Message);
             Assert.Equal("42", testEvent.CorrelationId);
         }
 
