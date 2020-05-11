@@ -6,6 +6,24 @@ using AppShapes.Core.Domain;
 
 namespace AppShapes.Core.Messaging
 {
+    /// <summary>
+    ///     MessageBase uses the following naming conventions:
+    ///     <list type="bullet">
+    ///         <item>
+    ///             <term>Context</term><description>first part of namespace (e.g., OrderManagement)</description>
+    ///         </item>
+    ///         <item>
+    ///             <term>Type</term><description>type name (e.g., OrderCreatedEvent)</description>
+    ///         </item>
+    ///         <item>
+    ///             <term>Entity</term><description>type name minus action and type (e.g., Order)</description>
+    ///         </item>
+    ///     </list>
+    ///     <remarks>
+    ///         Override <see cref="GetContext" />, <see cref="GetMessageType" />, and/or <see cref="GetEntityName" /> to
+    ///         customize naming convention.
+    ///     </remarks>
+    /// </summary>
     public abstract class MessageBase
     {
         private string itsContext;
@@ -50,10 +68,14 @@ namespace AppShapes.Core.Messaging
 
         protected virtual string GetEntityName()
         {
-            return GetType().Name;
+            string[] words = GetType().Name.WordsFromCamelCase();
+            return string.Join(null, words.Take(words.Length - 2));
         }
 
-        protected abstract string GetMessageType();
+        protected virtual string GetMessageType()
+        {
+            return GetType().Name;
+        }
 
         protected virtual string GetVersion()
         {

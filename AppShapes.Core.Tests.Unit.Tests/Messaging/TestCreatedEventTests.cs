@@ -4,34 +4,40 @@ using Xunit;
 
 namespace AppShapes.Core.Tests.Unit.Tests.Messaging
 {
-    public class TestEventTests
+    public class TestCreatedEventTests
     {
         [Fact]
         public void GetContextMustReturnExpectedStringWhenCalled()
         {
-            Assert.Equal("Testing", new StubTestEvent().InvokeGetContext());
+            Assert.Equal(nameof(AppShapes), new StubTestCreatedEvent().InvokeGetContext());
         }
 
         [Fact]
         public void GetEntityIdMustReturnTestIdWhenCalled()
         {
-            TestEvent e = new TestEvent();
+            TestCreatedEvent e = new TestCreatedEvent();
             Assert.Equal(e.TestId, e.GetEntityId());
         }
 
         [Fact]
         public void GetEntityNameMustReturnExpectedStringWhenCalled()
         {
-            Assert.Equal("Test", new StubTestEvent().InvokeGetEntityName());
+            Assert.Equal("StubTest", new StubTestCreatedEvent().InvokeGetEntityName());
         }
 
         [Fact]
         public void GetMessageTypeMustReturnExpectedStringWhenCalled()
         {
-            Assert.Equal("TestEvent", new StubTestEvent().InvokeGetMessageType());
+            Assert.Equal(nameof(StubTestCreatedEvent), new StubTestCreatedEvent().InvokeGetMessageType());
         }
 
-        private class StubTestEvent : TestEvent
+        [Fact]
+        public void GetVersionMustReturnExpectedStringWhenCalled()
+        {
+            Assert.Equal("v1.0", new StubTestCreatedEvent().Version);
+        }
+
+        private class StubTestCreatedEvent : TestCreatedEvent
         {
             public IEnumerable<char> InvokeGetContext()
             {

@@ -6,8 +6,8 @@
     <Company>AppShapes</Company>
     <Description>Core testing patterns, e.g., MockLogger.</Description>
     <PackageId>AppShapes.Core.Testing</PackageId>
-    <Version>3.1.3</Version>
-    <PackageReleaseNotes>Move UseEnvironment call to delegate</PackageReleaseNotes>
+    <Version>3.1.4</Version>
+    <PackageReleaseNotes>Create virtual implementations</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
