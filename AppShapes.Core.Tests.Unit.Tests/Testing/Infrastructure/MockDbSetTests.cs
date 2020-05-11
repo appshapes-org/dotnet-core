@@ -10,6 +10,16 @@ namespace AppShapes.Core.Tests.Unit.Tests.Testing.Infrastructure
     public class MockDbSetTests
     {
         [Fact]
+        public async void AddAsyncMustAddEntityAndReturnEntityEntryWhenCalled()
+        {
+            StubMockDbSet<Person> persons = new StubMockDbSet<Person>();
+            Person person = new Person {FirstName = "Bob", LastName = "Smith"};
+            EntityEntry<Person> entry = await persons.AddAsync(person);
+            Assert.Equal(person.Id, entry.Entity.Id);
+            Assert.Contains(persons.EntitiesGetter, x => x.Id == person.Id);
+        }
+
+        [Fact]
         public void AddMustAddEntityAndReturnEntityEntryWhenCalled()
         {
             StubMockDbSet<Person> persons = new StubMockDbSet<Person>();
