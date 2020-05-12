@@ -6,8 +6,8 @@
     <Company>AppShapes</Company>
     <Description>Core testing patterns, e.g., MockLogger.</Description>
     <PackageId>AppShapes.Core.Testing</PackageId>
-    <Version>3.1.6</Version>
-    <PackageReleaseNotes>Create DatabaseWebApplicationBuilder</PackageReleaseNotes>
+    <Version>3.1.7</Version>
+    <PackageReleaseNotes>Create ServiceTestsBase</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 

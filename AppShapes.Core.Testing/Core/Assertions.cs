@@ -21,5 +21,11 @@ namespace AppShapes.Core.Testing.Core
         {
             return actual ?? throw new ArgumentNullException(nameof(actual));
         }
+
+        public static void True(bool condition, string message)
+        {
+            if (!condition)
+                throw new InvalidOperationException(message);
+        }
     }
 }
