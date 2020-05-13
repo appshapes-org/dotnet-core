@@ -19,7 +19,7 @@ namespace AppShapes.Core.Testing.Service
             return builder;
         };
 
-        public ServiceProvider Dependencies { get; private set; }
+        public ServiceProvider Dependencies { get; protected set; }
 
         protected virtual void ConfigureBootstrap(ServiceProvider provider)
         {

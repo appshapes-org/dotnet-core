@@ -26,6 +26,14 @@ namespace AppShapes.Core.Testing.Infrastructure
             Transactions.Pop().Status = TransactionStatus.Committed;
         }
 
+        public bool Created { get; private set; }
+
+        public override bool EnsureCreated()
+        {
+            Created = true;
+            return Created;
+        }
+
         public override void RollbackTransaction()
         {
             Transactions.Pop().Status = TransactionStatus.Aborted;
