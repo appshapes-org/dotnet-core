@@ -8,6 +8,7 @@ namespace AppShapes.Core.Service
         {
             filters.Add<ExceptionLoggerFilter>();
             filters.Add<ActionLoggerFilter>();
+            filters.Add<ActionExceptionFilter>();
         }
     }
 }

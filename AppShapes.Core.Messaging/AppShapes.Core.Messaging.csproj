@@ -5,9 +5,9 @@
     <Authors>@RjaeEaston</Authors>
     <Company>AppShapes</Company>
     <Description>AppShapes.Core.Messaging</Description>
-    <Version>3.1.3</Version>
+    <Version>3.1.4</Version>
     <PackageId>AppShapes.Core.Messaging</PackageId>
-    <PackageReleaseNotes>Create virtual implementations</PackageReleaseNotes>
+    <PackageReleaseNotes>Create ActionExceptionFilter</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
