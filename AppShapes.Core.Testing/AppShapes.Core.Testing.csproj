@@ -6,8 +6,8 @@
     <Company>AppShapes</Company>
     <Description>Core testing patterns, e.g., MockLogger.</Description>
     <PackageId>AppShapes.Core.Testing</PackageId>
-    <Version>3.1.8</Version>
-    <PackageReleaseNotes>Close coverage</PackageReleaseNotes>
+    <Version>3.1.9</Version>
+    <PackageReleaseNotes>Create ActionExceptionFilter</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 

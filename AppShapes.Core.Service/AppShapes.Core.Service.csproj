@@ -6,8 +6,8 @@
     <Company>AppShapes</Company>
     <Description>ASP.NET Core Service</Description>
     <PackageId>AppShapes.Core.Service</PackageId>
-    <Version>3.1.3</Version>
-    <PackageReleaseNotes>Create virtual implementations</PackageReleaseNotes>
+    <Version>3.1.4</Version>
+    <PackageReleaseNotes>Create ActionExceptionFilter</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AppShapes.Core.Domain\AppShapes.Core.Domain.csproj" />
     <ProjectReference Include="..\AppShapes.Core.Logging\AppShapes.Core.Logging.csproj" />
   </ItemGroup>
 
