@@ -42,5 +42,17 @@ namespace AppShapes.Core.Tests.Unit.Tests.Testing.Core
         {
             Assert.Equal("Value cannot be null. (Parameter 'actual')", Assert.Throws<ArgumentNullException>(() => Assertions.NotNull(null)).Message);
         }
+
+        [Fact]
+        public void TrueMustNotThrowExceptionWhenConditionIsTrue()
+        {
+            Assertions.True(true, null);
+        }
+
+        [Fact]
+        public void TrueMustThrowExceptionWhenConditionIsFalse()
+        {
+            Assert.Equal("42", Assert.Throws<InvalidOperationException>(() => Assertions.True(false, "42")).Message);
+        }
     }
 }
