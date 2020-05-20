@@ -190,6 +190,8 @@ namespace AppShapes.Core.Tests.Unit.Tests.Testing.Infrastructure
                 throw new NotImplementedException();
             }
 
+            public bool SavingChanges { get; } = false;
+
             public bool SensitiveLoggingEnabled { get; }
 
             public InternalEntityEntry StartTracking(InternalEntityEntry entry)

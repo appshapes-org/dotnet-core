@@ -15,6 +15,7 @@ namespace AppShapes.Core.Messaging
 
         public OutboxItem(MessageBase message)
         {
+            Context = message.Context;
             CorrelationId = message.CorrelationId;
             Id = message.Id;
             EntityId = message.GetEntityId();
@@ -23,6 +24,8 @@ namespace AppShapes.Core.Messaging
             Timestamp = message.Timestamp;
             Type = message.Type;
         }
+
+        public string Context { get; set; }
 
         public string CorrelationId { get; set; }
 
