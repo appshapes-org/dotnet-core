@@ -1,20 +1,19 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <Authors>@RjaeEaston</Authors>
     <Company>AppShapes</Company>
-    <Description>AppShapes.Core.Database</Description>
-    <Version>3.1.5</Version>
-    <PackageId>AppShapes.Core.Database</PackageId>
-    <PackageReleaseNotes>Create Dispatcher</PackageReleaseNotes>
+    <Description>AppShapes.Core.Messaging.Kafka</Description>
+    <Version>1.0.0</Version>
+    <PackageId>AppShapes.Core.Messaging.Kafka</PackageId>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Confluent.Kafka" Version="1.4.3" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.6.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.4" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="3.1.4" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>@RjaeEaston</Authors>
+    <Company>AppShapes</Company>
+    <Description>AppShapes.Core.Dispatcher</Description>
+    <Version>1.0.0</Version>
+    <PackageId>AppShapes.Core.Dispatcher</PackageId>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.6.0" />
+    <PackageReference Include="Polly" Version="7.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AppShapes.Core.Configuration\AppShapes.Core.Configuration.csproj" />
+    <ProjectReference Include="..\AppShapes.Core.Console\AppShapes.Core.Console.csproj" />
+    <ProjectReference Include="..\AppShapes.Core.Logging\AppShapes.Core.Logging.csproj" />
+    <ProjectReference Include="..\AppShapes.Core.Database\AppShapes.Core.Database.csproj" />
+  </ItemGroup>
+
+</Project>

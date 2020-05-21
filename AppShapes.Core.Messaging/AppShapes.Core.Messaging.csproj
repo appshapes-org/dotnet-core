@@ -5,19 +5,21 @@
     <Authors>@RjaeEaston</Authors>
     <Company>AppShapes</Company>
     <Description>AppShapes.Core.Messaging</Description>
-    <Version>3.1.4</Version>
+    <Version>3.2.2</Version>
     <PackageId>AppShapes.Core.Messaging</PackageId>
-    <PackageReleaseNotes>Create ActionExceptionFilter</PackageReleaseNotes>
+    <PackageReleaseNotes>Create Dispatcher</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.4.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.6.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\AppShapes.Core.Domain\AppShapes.Core.Domain.csproj" />
+    <ProjectReference Include="..\AppShapes.Core.Logging\AppShapes.Core.Logging.csproj" />
     <ProjectReference Include="..\AppShapes.Core\AppShapes.Core.csproj" />
   </ItemGroup>
 
