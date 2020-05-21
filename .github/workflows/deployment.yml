@@ -27,8 +27,17 @@ jobs:
         if dotnet nuget push ./AppShapes.Core/bin/Debug/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --timeout 15; then
             dotnet nuget push ./AppShapes.Core/bin/Debug/*.snupkg -k ${{ secrets.NUGET_API_KEY }} -s https://www.nuget.org/api/v2/symbolpackage --timeout 15
         fi
+        if dotnet nuget push ./AppShapes.Core.Configuration/bin/Debug/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --timeout 15; then
+            dotnet nuget push ./AppShapes.Core.Configuration/bin/Debug/*.snupkg -k ${{ secrets.NUGET_API_KEY }} -s https://www.nuget.org/api/v2/symbolpackage --timeout 15
+        fi
+        if dotnet nuget push ./AppShapes.Core.Console/bin/Debug/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --timeout 15; then
+            dotnet nuget push ./AppShapes.Core.Console/bin/Debug/*.snupkg -k ${{ secrets.NUGET_API_KEY }} -s https://www.nuget.org/api/v2/symbolpackage --timeout 15
+        fi
         if dotnet nuget push ./AppShapes.Core.Database/bin/Debug/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --timeout 15; then
             dotnet nuget push ./AppShapes.Core.Database/bin/Debug/*.snupkg -k ${{ secrets.NUGET_API_KEY }} -s https://www.nuget.org/api/v2/symbolpackage --timeout 15
+        fi
+        if dotnet nuget push ./AppShapes.Core.Dispatcher/bin/Debug/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --timeout 15; then
+            dotnet nuget push ./AppShapes.Core.Dispatcher/bin/Debug/*.snupkg -k ${{ secrets.NUGET_API_KEY }} -s https://www.nuget.org/api/v2/symbolpackage --timeout 15
         fi
         if dotnet nuget push ./AppShapes.Core.Domain/bin/Debug/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --timeout 15; then
             dotnet nuget push ./AppShapes.Core.Domain/bin/Debug/*.snupkg -k ${{ secrets.NUGET_API_KEY }} -s https://www.nuget.org/api/v2/symbolpackage --timeout 15
@@ -38,6 +47,9 @@ jobs:
         fi
         if dotnet nuget push ./AppShapes.Core.Messaging/bin/Debug/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --timeout 15; then
             dotnet nuget push ./AppShapes.Core.Messaging/bin/Debug/*.snupkg -k ${{ secrets.NUGET_API_KEY }} -s https://www.nuget.org/api/v2/symbolpackage --timeout 15
+        fi
+        if dotnet nuget push ./AppShapes.Core.Messaging.Kafka/bin/Debug/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --timeout 15; then
+            dotnet nuget push ./AppShapes.Core.Messaging.Kafka/bin/Debug/*.snupkg -k ${{ secrets.NUGET_API_KEY }} -s https://www.nuget.org/api/v2/symbolpackage --timeout 15
         fi
         if dotnet nuget push ./AppShapes.Core.Service/bin/Debug/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --timeout 15; then
             dotnet nuget push ./AppShapes.Core.Service/bin/Debug/*.snupkg -k ${{ secrets.NUGET_API_KEY }} -s https://www.nuget.org/api/v2/symbolpackage --timeout 15

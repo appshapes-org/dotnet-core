@@ -5,6 +5,6 @@ namespace AppShapes.Core.Messaging
 {
     public interface IMessageProducer : IDisposable
     {
-        Task ProduceAsync(OutboxItem item);
+        Task Produce(OutboxItem item);
     }
 }

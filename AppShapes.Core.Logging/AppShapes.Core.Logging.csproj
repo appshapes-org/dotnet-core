@@ -6,14 +6,14 @@
     <Company>AppShapes</Company>
     <Description>Core logging patterns, e.g., LoggingExtensions.</Description>
     <PackageId>AppShapes.Core.Logging</PackageId>
-    <Version>3.1.3</Version>
-    <PackageReleaseNotes>Create ActionExceptionFilter</PackageReleaseNotes>
+    <Version>3.1.4</Version>
+    <PackageReleaseNotes>Create Dispatcher</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="AppShapes.Logging.Console" Version="2.0.1" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.5.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.6.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.4" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.4" />
   </ItemGroup>

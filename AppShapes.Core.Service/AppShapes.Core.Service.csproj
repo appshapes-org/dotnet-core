@@ -6,8 +6,8 @@
     <Company>AppShapes</Company>
     <Description>ASP.NET Core Service</Description>
     <PackageId>AppShapes.Core.Service</PackageId>
-    <Version>3.1.4</Version>
-    <PackageReleaseNotes>Create ActionExceptionFilter</PackageReleaseNotes>
+    <Version>3.1.5</Version>
+    <PackageReleaseNotes>Create Dispatcher</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <PackageReference Include="AppShapes.Logging.Console" Version="2.0.1" />
-    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.5.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.6.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.4" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />

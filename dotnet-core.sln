@@ -11,6 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.github\workflows\integration.yml = .github\workflows\integration.yml
 		NuGet.Config = NuGet.Config
 		README.md = README.md
+		ROADMAP.md = ROADMAP.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppShapes.Core.Service", "AppShapes.Core.Service\AppShapes.Core.Service.csproj", "{250CD979-E588-46F1-82D9-2532DE8A7487}"
@@ -31,7 +32,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppShapes.Core.Messaging", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppShapes.Core.Tests.Integration.Tests", "AppShapes.Core.Tests.Integration.Tests\AppShapes.Core.Tests.Integration.Tests.csproj", "{0627245E-840D-4F0F-8B1B-C476078703B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppShapes.Core.Messaging.Kafka", "AppShapes.Core.Messaging.Kafka\AppShapes.Core.Messaging.Kafka.csproj", "{2E542069-AA8B-4F6F-AD18-6C13FB59C382}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppShapes.Core.Messaging.Kafka", "AppShapes.Core.Messaging.Kafka\AppShapes.Core.Messaging.Kafka.csproj", "{2E542069-AA8B-4F6F-AD18-6C13FB59C382}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppShapes.Core.Dispatcher", "AppShapes.Core.Dispatcher\AppShapes.Core.Dispatcher.csproj", "{05636BE0-5063-49D9-BCA0-1E3E4B173595}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppShapes.Core.Configuration", "AppShapes.Core.Configuration\AppShapes.Core.Configuration.csproj", "{38A99779-97AD-4739-9451-7C00C52B47E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppShapes.Core.Console", "AppShapes.Core.Console\AppShapes.Core.Console.csproj", "{04AE6B9B-7FBC-41EE-BACD-DED6373CF5B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +86,18 @@ Global
 		{2E542069-AA8B-4F6F-AD18-6C13FB59C382}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E542069-AA8B-4F6F-AD18-6C13FB59C382}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E542069-AA8B-4F6F-AD18-6C13FB59C382}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05636BE0-5063-49D9-BCA0-1E3E4B173595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05636BE0-5063-49D9-BCA0-1E3E4B173595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05636BE0-5063-49D9-BCA0-1E3E4B173595}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05636BE0-5063-49D9-BCA0-1E3E4B173595}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38A99779-97AD-4739-9451-7C00C52B47E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38A99779-97AD-4739-9451-7C00C52B47E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38A99779-97AD-4739-9451-7C00C52B47E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38A99779-97AD-4739-9451-7C00C52B47E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04AE6B9B-7FBC-41EE-BACD-DED6373CF5B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04AE6B9B-7FBC-41EE-BACD-DED6373CF5B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04AE6B9B-7FBC-41EE-BACD-DED6373CF5B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04AE6B9B-7FBC-41EE-BACD-DED6373CF5B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

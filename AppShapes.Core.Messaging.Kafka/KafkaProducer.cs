@@ -21,13 +21,13 @@ namespace AppShapes.Core.Messaging.Kafka
             itsProducer?.Dispose();
         }
 
-        public virtual async Task ProduceAsync(OutboxItem item)
+        public virtual async Task Produce(OutboxItem item)
         {
             string topic = GetTopic(item);
             string key = GetKey(item);
             string message = GetMessage(item);
             int partition = GetPartition(item.EntityId);
-            await Produce(new TopicPartitionMessage(topic, partition, key, message));
+            await Produce(new KafkaMessage(topic, partition, key, message));
         }
 
         protected virtual string GetKey(OutboxItem item)
@@ -68,16 +68,16 @@ namespace AppShapes.Core.Messaging.Kafka
             return item.Context;
         }
 
-        protected virtual async Task<DeliveryResult<string, string>> Produce(TopicPartitionMessage publication)
+        protected virtual async Task<DeliveryResult<string, string>> Produce(KafkaMessage kafkaMessage)
         {
             try
             {
-                Logger.Debug<KafkaProducer>($"{publication}");
-                return await Producer.ProduceAsync(publication.TopicPartition, publication.Message);
+                Logger.Debug<KafkaProducer>($"{kafkaMessage}");
+                return await Producer.ProduceAsync(kafkaMessage.TopicPartition, kafkaMessage.Message);
             }
             catch (Exception e)
             {
-                Logger.Error<KafkaProducer>(e, $"{e.Message}, {publication}");
+                Logger.Error<KafkaProducer>(e, $"{e.Message}, {kafkaMessage}");
                 throw;
             }
         }

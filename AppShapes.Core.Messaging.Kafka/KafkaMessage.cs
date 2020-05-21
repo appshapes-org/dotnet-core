@@ -2,9 +2,9 @@
 
 namespace AppShapes.Core.Messaging.Kafka
 {
-    public class TopicPartitionMessage
+    public class KafkaMessage
     {
-        public TopicPartitionMessage(string topic, int partition, string key, string message)
+        public KafkaMessage(string topic, int partition, string key, string message)
         {
             TopicPartition = new TopicPartition(topic, partition);
             Message = new Message<string, string> {Key = key, Value = message};
