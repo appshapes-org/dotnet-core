@@ -16,5 +16,11 @@ namespace AppShapes.Core.Dispatcher
             base.ConfigureServices(services);
             new ConfigureDispatcherCommand().Execute<T>(services, Configuration);
         }
+
+        protected override void StartWork()
+        {
+            base.StartWork();
+            new OutboxProcessorCommand(Provider).Execute();
+        }
     }
 }
