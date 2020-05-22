@@ -2,7 +2,7 @@
 
 namespace AppShapes.Core.Messaging.Kafka
 {
-    public class KafkaProducerFactory
+    public class KafkaProducerFactory : IMessageProducerFactory
     {
         public KafkaProducerFactory(ILogger<KafkaProducer> logger, KafkaSettings settings)
         {
