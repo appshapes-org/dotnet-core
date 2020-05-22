@@ -5,7 +5,7 @@
     <Authors>@RjaeEaston</Authors>
     <Company>AppShapes</Company>
     <Description>AppShapes.Core.Dispatcher</Description>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <PackageId>AppShapes.Core.Dispatcher</PackageId>
     <PackageReleaseNotes>Create OutboxProcessorCommand</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>

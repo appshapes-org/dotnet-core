@@ -23,7 +23,7 @@ namespace AppShapes.Core.Dispatcher
             while (ShouldProcessOutbox(cancellationToken))
             {
                 await ProcessOutbox(cancellationToken);
-                WaitForOutbox(Settings.WaitForOutboxInSeconds, cancellationToken);
+                WaitForOutbox(TimeSpan.FromSeconds(Settings.WaitForOutboxInSeconds), cancellationToken);
             }
         }
 
@@ -47,8 +47,9 @@ namespace AppShapes.Core.Dispatcher
             return !cancellationToken.IsCancellationRequested;
         }
 
-        protected virtual void WaitForOutbox(int waitInMilliseconds, CancellationToken cancellationToken)
+        protected virtual void WaitForOutbox(TimeSpan waitTimeSpan, CancellationToken cancellationToken)
         {
+            int waitInMilliseconds = (int) waitTimeSpan.TotalMilliseconds;
             Logger.Debug<OutboxProcessor>($"{nameof(waitInMilliseconds)}: {waitInMilliseconds}");
             cancellationToken.WaitHandle.WaitOne(waitInMilliseconds);
         }
