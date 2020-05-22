@@ -7,7 +7,7 @@ namespace AppShapes.Core.Configuration
     {
         public virtual void Execute<T>(IServiceCollection services, string assemblyQualifiedName, ServiceLifetime lifetime = ServiceLifetime.Scoped)
         {
-            services.Add(new ServiceDescriptor(typeof(T), Type.GetType(assemblyQualifiedName), lifetime));
+            services.Add(new ServiceDescriptor(typeof(T), Type.GetType(assemblyQualifiedName, true), lifetime));
         }
     }
 }
