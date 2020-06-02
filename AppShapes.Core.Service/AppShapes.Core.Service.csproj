@@ -6,8 +6,8 @@
     <Company>AppShapes</Company>
     <Description>ASP.NET Core Service</Description>
     <PackageId>AppShapes.Core.Service</PackageId>
-    <Version>3.1.5</Version>
-    <PackageReleaseNotes>Create Dispatcher</PackageReleaseNotes>
+    <Version>3.1.6</Version>
+    <PackageReleaseNotes>Cover ActionExceptionFilter</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
