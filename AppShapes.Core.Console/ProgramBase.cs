@@ -33,7 +33,7 @@ namespace AppShapes.Core.Console
 
         public virtual void Run()
         {
-            if (Environment.ExitCode != 0)
+            if (System.Environment.ExitCode != 0)
                 return;
             Initialize();
             StartWork();
@@ -56,9 +56,16 @@ namespace AppShapes.Core.Console
             (Provider as IDisposable)?.Dispose();
         }
 
+        protected string Environment { get; set; }
+
         protected virtual IConfigurationBuilder GetConfigurationBuilder()
         {
             return new ConfigureConfigurationBuilderCommand().Execute(Context);
+        }
+
+        protected virtual ConfigureEnvironmentCommand GetConfigureEnvironmentCommand()
+        {
+            return new ConfigureEnvironmentCommand();
         }
 
         protected virtual ILogger GetLogger()
@@ -75,6 +82,7 @@ namespace AppShapes.Core.Console
 
         protected virtual void Initialize()
         {
+            Environment = GetConfigureEnvironmentCommand().Execute(Context.Environment);
             Configuration = GetConfigurationBuilder().Build();
             Provider = GetServiceProviderBuilder().BuildServiceProvider();
         }
@@ -84,12 +92,12 @@ namespace AppShapes.Core.Console
         protected virtual void OnCommandLineNotParsed(IEnumerable<Error> errors)
         {
             Error error = errors?.FirstOrDefault();
-            Environment.ExitCode = error == null ? 1 : (int) error.Tag;
+            System.Environment.ExitCode = error == null ? 1 : (int) error.Tag;
         }
 
         protected virtual void OnCommandLineParsed(T context)
         {
-            Environment.ExitCode = 0; // TODO: We may be able to remove this line if ExitCode initializes to 0.
+            System.Environment.ExitCode = 0; // TODO: We may be able to remove this line if ExitCode initializes to 0.
             Context = context;
         }
 
