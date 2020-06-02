@@ -50,6 +50,13 @@ namespace AppShapes.Core.Tests.Unit.Tests.Messaging
         }
 
         [Fact]
+        public void ToStringMustReturnExpectedValueWhenCalled()
+        {
+            TestCreatedEvent message = new TestCreatedEvent {CorrelationId = "42"};
+            Assert.Equal($"Type: {message.Type}, EntityId: {message.GetEntityId()}, Context: {message.Context}, Entity: {message.Entity}, CorrelationId: {message.CorrelationId}, Id: {message.Id}, Timestamp: {message.Timestamp}", new OutboxItem(message).ToString());
+        }
+
+        [Fact]
         public void UpdateMessageMustThrowExceptionWhenMessageDoesNotContainProperty()
         {
             Assert.Equal($"{nameof(TestCreatedEvent)}.DoesNotExist not found; not setting to: 42", Assert.Throws<ArgumentException>(() => new OutboxItem(new TestCreatedEvent()).UpdateMessage("DoesNotExist", "42")).Message);

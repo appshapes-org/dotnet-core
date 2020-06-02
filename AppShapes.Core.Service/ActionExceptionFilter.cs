@@ -15,13 +15,12 @@ namespace AppShapes.Core.Service
         {
         }
 
-        protected virtual bool HandleNotFoundException(ActionExecutedContext context)
+        protected virtual void HandleNotFoundException(ActionExecutedContext context)
         {
             if (!(context.Exception is NotFoundException exception))
-                return false;
+                return;
             context.Result = new NotFoundObjectResult(exception.Message);
             context.ExceptionHandled = true;
-            return true;
         }
     }
 }
