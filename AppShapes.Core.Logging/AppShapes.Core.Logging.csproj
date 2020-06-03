@@ -6,8 +6,8 @@
     <Company>AppShapes</Company>
     <Description>Core logging patterns, e.g., LoggingExtensions.</Description>
     <PackageId>AppShapes.Core.Logging</PackageId>
-    <Version>3.1.4</Version>
-    <PackageReleaseNotes>Create Dispatcher</PackageReleaseNotes>
+    <Version>3.1.5</Version>
+    <PackageReleaseNotes>Core version change</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 

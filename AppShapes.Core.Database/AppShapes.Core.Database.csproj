@@ -5,9 +5,9 @@
     <Authors>@RjaeEaston</Authors>
     <Company>AppShapes</Company>
     <Description>AppShapes.Core.Database</Description>
-    <Version>3.1.5</Version>
+    <Version>3.1.6</Version>
     <PackageId>AppShapes.Core.Database</PackageId>
-    <PackageReleaseNotes>Create Dispatcher</PackageReleaseNotes>
+    <PackageReleaseNotes>Core version change</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
