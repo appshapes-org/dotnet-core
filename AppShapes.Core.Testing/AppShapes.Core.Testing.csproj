@@ -6,8 +6,8 @@
     <Company>AppShapes</Company>
     <Description>Core testing patterns, e.g., MockLogger.</Description>
     <PackageId>AppShapes.Core.Testing</PackageId>
-    <Version>3.1.10</Version>
-    <PackageReleaseNotes>Create Dispatcher</PackageReleaseNotes>
+    <Version>3.1.11</Version>
+    <PackageReleaseNotes>Add FormatterHelper</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 

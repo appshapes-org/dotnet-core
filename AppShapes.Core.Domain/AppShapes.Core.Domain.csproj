@@ -5,9 +5,9 @@
     <Authors>@RjaeEaston</Authors>
     <Company>AppShapes</Company>
     <Description>AppShapes.Core.Domain</Description>
-    <Version>3.1.4</Version>
+    <Version>3.1.5</Version>
     <PackageId>AppShapes.Core.Domain</PackageId>
-    <PackageReleaseNotes>Create Dispatcher</PackageReleaseNotes>
+    <PackageReleaseNotes>Close coverage</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 

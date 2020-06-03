@@ -5,9 +5,9 @@
     <Authors>@RjaeEaston</Authors>
     <Company>AppShapes</Company>
     <Description>AppShapes.Core.Messaging.Kafka</Description>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <PackageId>AppShapes.Core.Messaging.Kafka</PackageId>
-    <PackageReleaseNotes>Fix KafkaProducerFactory</PackageReleaseNotes>
+    <PackageReleaseNotes>Core version change</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 

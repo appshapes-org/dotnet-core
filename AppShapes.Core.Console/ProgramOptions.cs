@@ -8,6 +8,6 @@ namespace AppShapes.Core.Console
         public virtual string BasePath { get; set; } = System.Environment.CurrentDirectory;
 
         [Option('e', "environment", Required = false, HelpText = "Set environment to specified identifier.")]
-        public virtual string Environment { get; set; } = EnvironmentHelper.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+        public virtual string Environment { get; set; } = System.Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
     }
 }

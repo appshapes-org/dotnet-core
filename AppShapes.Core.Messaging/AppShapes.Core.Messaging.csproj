@@ -5,9 +5,9 @@
     <Authors>@RjaeEaston</Authors>
     <Company>AppShapes</Company>
     <Description>AppShapes.Core.Messaging</Description>
-    <Version>3.2.2</Version>
+    <Version>3.2.3</Version>
     <PackageId>AppShapes.Core.Messaging</PackageId>
-    <PackageReleaseNotes>Create Dispatcher</PackageReleaseNotes>
+    <PackageReleaseNotes>Core version change</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
